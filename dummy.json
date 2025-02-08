@@ -1,0 +1,595 @@
+{
+    "Ambulance Services": {
+        "content": {
+            "Emergency transport": {
+                "In-Network": "$100 copayment per day",
+                "Out-of-Network": "$100 copayment per day (deductible does not apply)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Other medically necessary transport": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Cardiac Rehabilitation": {
+        "content": {
+            "Default": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "$25 copayment per in-person or telehealth visit"
+            }
+        }
+    },
+    "Chiropractor Services": {
+        "content": {
+            "Diagnostic lab tests and x-rays": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Labs, X-Rays and Other Tests)"
+            },
+            "Outpatient medical care services": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Dialysis Services": {
+        "content": {
+            "Default": {
+                "In-Network": "10% coinsurance per in-person or telehealth visit",
+                "Out-of-Network": "10% coinsurance per in-person or telehealth visit"
+            }
+        }
+    },
+    "Durable Medical Equipment": {
+        "content": {
+            "Durable medical equipment": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Breastfeeding equipment": {
+                "In-Network": "No cost",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "Refer to covered service description"
+            }
+        }
+    },
+    "Early Intervention Services": {
+        "content": {
+            "Default": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "$25 copayment per in-person or telehealth visit"
+            }
+        }
+    },
+    "Emergency Medical Outpatient Services": {
+        "content": {
+            "Emergency room services": {
+                "In-Network": "$50 copayment per visit then, 10% coinsurance",
+                "Out-of-Network": "$50 copayment per visit then, 10% coinsurance (deductible does not apply)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Office and health center services": {
+                "In-Network": "$0 copayment per in-person or telehealth visit to Virtual Care Team providers designated as primary care $20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers $0 copayment per visit to designated telehealth vendor",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Hospital outpatient medical services": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Dental accident treatment": {
+                "In-Network": "$100 copayment per member per group plan year then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Family Planning": {
+        "content": {
+            "Default": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "$0 copayment per in-person or telehealth visit"
+            }
+        }
+    },
+    "Home Health Care": {
+        "content": {
+            "Default": {
+                "In-Network": "10% coinsurance per in-person or telehealth visit",
+                "Out-of-Network": "10% coinsurance per in-person or telehealth visit"
+            }
+        }
+    },
+    "Hospice Services": {
+        "content": {
+            "Default": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "10% coinsurance (in-person or telehealth)"
+            }
+        }
+    },
+    "Infertility Services": {
+        "content": {
+            "Outpatient medical care services": {
+                "In-Network": "$20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient physician and other professional provider services": {
+                "In-Network": "$200 copayment per in-person or telehealth visit for surgeon fees then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient hospital services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Outpatient lab tests and x-rays": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Labs, X-Rays and Other Tests)"
+            },
+            "Outpatient day surgical facility services": {
+                "In-Network": "$50 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Office or health center surgery": {
+                "In-Network": "10% coinsurance per in-person or postoperative telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Inpatient Care in a Chronic Disease Hospital": {
+        "content": {
+            "Hospital services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Inpatient Care in a Rehabilitation Hospital": {
+        "content": {
+            "Hospital services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "60 days per group plan year"
+            },
+            "Physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Inpatient Care in a Skilled Nursing Facility": {
+        "content": {
+            "Facility services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "100 days per group plan year"
+            },
+            "Physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Inpatient Medical and Surgical Care in a General Hospital": {
+        "content": {
+            "Hospital services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Physician and other covered professional provider services": {
+                "In-Network": "$200 copayment per in-person or telehealth visit for surgeon fees then, 10% coinsurance $100 copayment per in-person or telehealth visit for surgeon fees for removal of impacted teeth then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Termination of pregnancy": {
+                "In-Network": "No cost",
+                "Out-of-Network": "amount above allowed charge (deductible and coinsurance do not apply)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Labs, X-Rays and Other Tests": {
+        "content": {
+            "Diagnostic lab tests": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Preoperative tests": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "MRI, CT scan, positron emission tomography and nuclear cardiac imaging tests": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Diagnostic x-rays and other imaging tests": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Other diagnostic tests": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Maternity Services": {
+        "content": {
+            "Inpatient physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient hospital services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Prenatal care": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Other maternity services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Medical Care Outpatient Visits": {
+        "content": {
+            "Office and health center services": {
+                "In-Network": "$0 copayment per in-person or telehealth visit to Virtual Care Team providers designated as primary care $20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers $0 copayment per visit to designated telehealth vendor",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Hospital services": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Limited Services Clinic": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Acupuncture services by a licensed acupuncturist": {
+                "In-Network": "$25 copayment per visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "12 visits per member per group plan year"
+            },
+            "Self-injectable and certain specialty drugs excluded as a medical benefit": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Prescription Drugs)"
+            }
+        }
+    },
+    "Medical Formulas": {
+        "content": {
+            "Default": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Prescription Drugs)"
+            }
+        }
+    },
+    "Mental Health and Substance Use Treatment - Alcoholism Treatment": {
+        "content": {
+            "Outpatient services": {
+                "In-Network": "$0 copayment per in-person or telehealth visit to Virtual Care Team providers $20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers $0 copayment per visit to designated telehealth vendor",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient facility services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Mental Health and Substance Use Treatment - Biologically Based Mental Conditions": {
+        "content": {
+            "Outpatient services": {
+                "In-Network": "$0 copayment per in-person or telehealth visit to Virtual Care Team providers $20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers $0 copayment per visit to designated telehealth vendor",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient facility services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Mental Health and Substance Use Treatment - Non-Biologically Based Mental Conditions": {
+        "content": {
+            "Outpatient services": {
+                "In-Network": "$0 copayment per in-person or telehealth visit to Virtual Care Team providers $20 copayment per in-person or telehealth visit at Fenway Health Center $25 copayment per in-person or telehealth visit to other preferred providers $0 copayment per visit to designated telehealth vendor",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient physician and other covered professional provider services": {
+                "In-Network": "10% coinsurance (in-person or telehealth)",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Inpatient facility services": {
+                "In-Network": "$250 copayment per admission then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Oxygen and Respiratory Therapy": {
+        "content": {
+            "Oxygen and equipment for administration": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Respiratory therapy": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Medical Care Outpatient Visits)"
+            }
+        }
+    },
+    "Podiatry Care": {
+        "content": {
+            "Outpatient diagnostic lab tests and x-rays": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Labs, X-Rays and Other Tests)"
+            },
+            "Outpatient medical care services": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Medical Care Outpatient Visits)"
+            },
+            "Outpatient surgery": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Surgery as an Outpatient)"
+            }
+        }
+    },
+    "Prescription Drugs": {
+        "content": {
+            "Mail order pharmacy": {
+                "In-Network": "$30 copayment up to a 90-day supply (Tier 1) $60 copayment up to a 90-day supply (Tier 2) $90 copayment up to a 90-day supply (Tier 3)",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Fenway Health Center Retail pharmacy": {
+                "In-Network": "$5 copayment up to a 30-day supply (Tier 1) $10 copayment up to a 30-day supply (Tier 2) $15 copayment up to a 30-day supply (Tier 3)",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Other retail pharmacies": {
+                "In-Network": "$10 copayment up to a 30-day supply (Tier 1) $20 copayment up to a 30-day supply (Tier 2) $30 copayment up to a 30-day supply (Tier 3)",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Maintenance Choice Retail pharmacy": {
+                "In-Network": "$30 copayment up to a 90-day supply (Tier 1) $60 copayment up to a 90-day supply (Tier 2) $90 copayment up to a 90-day supply (Tier 3)",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            }
+        }
+    },
+    "Preventive Dental Care for Children": {
+        "content": {
+            "Preventive dental care for members under 18 to treat cleft lip and cleft palate": {
+                "In-Network": "Not covered; member pays all charges",
+                "Out-of-Network": "Not covered; member pays all charges"
+            },
+            "Pediatric Essential Dental Plan - Preventive and Diagnostic": {
+                "In-Network": "No cost",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Dental Plan for frequency limits)"
+            },
+            "Pediatric Essential Dental Plan - Basic Restorative": {
+                "In-Network": "25% coinsurance after separate dental plan deductible",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Dental Plan for frequency limits)"
+            },
+            "Pediatric Essential Dental Plan - Major Restorative": {
+                "In-Network": "50% coinsurance after separate dental plan deductible",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Dental Plan for frequency limits)"
+            },
+            "Pediatric Essential Dental Plan - Orthodontics": {
+                "In-Network": "50% coinsurance (deductible does not apply)",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(limited to medically necessary care preauthorized for qualified members)"
+            }
+        }
+    },
+    "Prosthetic Devices": {
+        "content": {
+            "Default": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "10% coinsurance"
+            }
+        }
+    },
+    "Radiation Therapy and Chemotherapy": {
+        "content": {
+            "Office and health center services": {
+                "In-Network": "10% coinsurance per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Hospital and free-standing radiation therapy and chemotherapy facility services": {
+                "In-Network": "10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Self-injectable and certain specialty drugs excluded as a medical benefit": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Prescription Drugs)"
+            }
+        }
+    },
+    "Routine Adult Physical Exams": {
+        "content": {
+            "Default": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "$0 copayment per in-person or telehealth visit"
+            }
+        }
+    },
+    "Routine Gynecological (GYN) Exams": {
+        "content": {
+            "Default": {
+                "In-Network": "No cost",
+                "Out-of-Network": "No cost"
+            }
+        }
+    },
+    "Routine Hearing Exams and Tests": {
+        "content": {
+            "Routine hearing exams and tests": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Hearing aid(s)": {
+                "In-Network": "Not covered; member pays all charges",
+                "Out-of-Network": "Not covered; member pays all charges"
+            }
+        }
+    },
+    "Routine Pediatric Care": {
+        "content": {
+            "Default": {
+                "In-Network": "$0 copayment per in-person or telehealth visit",
+                "Out-of-Network": "$0 copayment per in-person or telehealth visit"
+            }
+        }
+    },
+    "Routine Vision Care": {
+        "content": {
+            "Fenway Health Center": {
+                "In-Network": "$0 copayment per covered vision exam $40 copayment for a contact lens fitting",
+                "Out-of-Network": "Not covered; member pays all charges",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "1 exam per member per group plan year"
+            },
+            "Vision supplies for members until end of calendar month age 19": {
+                "In-Network": "35% coinsurance",
+                "Out-of-Network": "55% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "1 set of frames and/or lenses (or contact lenses) per member per group plan year"
+            },
+            "Vision supplies for other members": {
+                "In-Network": "Not covered; member pays all charges",
+                "Out-of-Network": "Not covered; member pays all charges"
+            }
+        }
+    },
+    "Second Opinions": {
+        "content": {
+            "Default": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Medical Care Outpatient Visits)"
+            }
+        }
+    },
+    "Short-Term Rehabilitation Therapy": {
+        "content": {
+            "Rehabilitation services": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "60 visits per member per group plan year for physical and occupational therapy (unlimited for autism)"
+            },
+            "Habilitation services": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "60 visits per member per group plan year for physical and occupational therapy (unlimited for autism)"
+            }
+        }
+    },
+    "Speech, Hearing and Language Disorder Treatment": {
+        "content": {
+            "Speech therapy": {
+                "In-Network": "$25 copayment per in-person or telehealth visit",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Outpatient medical care services": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Medical Care Outpatient Visits)"
+            },
+            "Diagnostic tests": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Labs, X-Rays and Other Tests)"
+            }
+        }
+    },
+    "Surgery as an Outpatient": {
+        "content": {
+            "Office and health center services": {
+                "In-Network": "$0 copayment per in-person or postoperative telehealth visit to Virtual Care Team providers designated as primary care 10% coinsurance per in-person or postoperative telehealth visit to other preferred providers",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Hospital and other day surgical facility services": {
+                "In-Network": "$50 copayment per admission then, 10% coinsurance $100 copayment for surgeon fees for removal of impacted teeth then, 10% coinsurance",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge per office visit)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Voluntary sterilization for women": {
+                "In-Network": "No cost",
+                "Out-of-Network": "20% coinsurance after deductible (and amount above allowed charge per office visit)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Termination of pregnancy": {
+                "In-Network": "No cost",
+                "Out-of-Network": "amount above allowed charge (deductible and coinsurance do not apply)",
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "None"
+            },
+            "Self-injectable and certain specialty drugs (not part of day surgery) excluded as a medical benefit": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Prescription Drugs)"
+            }
+        }
+    },
+    "TMJ Disorder Treatment": {
+        "content": {
+            "Outpatient medical care services": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Medical Care Outpatient Visits)"
+            },
+            "Outpatient surgery": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Surgery as an Outpatient)"
+            },
+            "Outpatient physical therapy": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Short-Term Rehabilitation Therapy)"
+            },
+            "Outpatient diagnostic x-rays": {
+                "Benefit Limit(In-Network and Out-of-Network Combined)": "(refer to Labs, X-Rays and Other Tests)"
+            }
+        }
+    },
+    "Well Newborn Care": {
+        "content": {
+            "Default": {
+                "In-Network": "$0 copayment for in-person or telehealth services",
+                "Out-of-Network": "$0 copayment for in-person or telehealth services"
+            }
+        }
+    }
+}
