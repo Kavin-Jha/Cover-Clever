@@ -1,8 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const botTimestamp = document.querySelector(".chat-message.bot .message-time");
+  if (botTimestamp) {
+      botTimestamp.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const chatBody = document.getElementById('chat-body');
   const userInput = document.getElementById('user-input');
   const sendBtn = document.getElementById('send-btn');
   const closeBtn = document.getElementById('close-btn');
+  
 
   closeBtn.addEventListener('click', () => {
     window.close();
@@ -24,16 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
   function addMessage(text, sender) {
     const message = document.createElement('div');
     message.classList.add('chat-message', sender);
+    
     message.innerHTML = `<div class="message-text">${text}</div>`;
-    
+
     const timestamp = document.createElement('div');
-    timestamp.classList.add('timestamp');
-    timestamp.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    message.appendChild(timestamp);
+    const timestampClass = sender === 'user' ? 'timestamp-user' : 'timestamp-bot';
     
+    timestamp.classList.add('timestamp', timestampClass);
+    timestamp.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
     chatBody.appendChild(message);
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }
+    chatBody.appendChild(timestamp); 
+}
+
 
   function showTypingIndicator() {
     const typingIndicator = document.createElement('div');

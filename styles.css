@@ -10,7 +10,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -143,9 +142,22 @@ body {
   border-radius: 12px 12px 12px 0px;
 }
 
-.timestamp {
-  font-size: 0.8em;
-  color: #999;
+.timestamp-user {
+  font-size: 12px;
+  color: gray;
+  text-align: right;
+}
+
+.timestamp-bot {
+  font-size: 12px;
+  color: gray;
+ text-align: left;
+}
+
+.message-time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
 }
 
 .chat-input {
