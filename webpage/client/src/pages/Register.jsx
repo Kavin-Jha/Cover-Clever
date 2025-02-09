@@ -16,20 +16,19 @@ export default function Register() {
     e.preventDefault();
     const { firstName, lastName, email, password } = data;
     try {
-      const { data } = await axios.post("/register", {
+      await axios.post("/register", {
         firstName,
         lastName,
         email,
         password,
       });
-      if (data.error) {
-        toast.error(data.error);
-      } else {
-        setData({});
-        toast.success("Registration success!");
-        navigate("/login");
-      }
+      
+      setData({});
+      toast.success("Registration success!");
+      navigate("/login");
     } catch (err) {
+      const errorMessage = err.response?.data?.error || "Registration failed";
+      toast.error(errorMessage);
       console.log(err);
     }
   };

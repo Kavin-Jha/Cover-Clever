@@ -18,35 +18,34 @@ export default function Login() {
     e.preventDefault();
     const { email, password } = data;
     try {
-      const { data } = await axios.post("/login", {
+      const response = await axios.post("/login", {
         email,
         password,
       });
-      if (data.error) {
-        toast.error(data.error);
-      } else {
-        setData({});
-        await fetchUser();
-        toast.success("Login success!");
-        navigate("/questionnaire");
-        
-        // Communicate with extension
-        if (typeof chrome !== 'undefined' && chrome.runtime) {
-          chrome.runtime.sendMessage(
-            "obhfnegefpkpoicjhfafbibcocbakkoo",
-            { 
-              type: "LOGIN_SUCCESS",
-              userData: data 
-            },
-            (response) => {
-              if (response.status === "success") {
-                navigate("/questionnaire");
-              }
+      
+      setData({});
+      await fetchUser();
+      toast.success("Login success!");
+      navigate("/questionnaire");
+      
+      // Communicate with extension
+      if (typeof chrome !== 'undefined' && chrome.runtime) {
+        chrome.runtime.sendMessage(
+          "obhfnegefpkpoicjhfafbibcocbakkoo",
+          { 
+            type: "LOGIN_SUCCESS",
+            userData: response.data 
+          },
+          (response) => {
+            if (response.status === "success") {
+              navigate("/questionnaire");
             }
-          );
-        }
+          }
+        );
       }
     } catch (err) {
+      const errorMessage = err.response?.data?.error || "Login failed";
+      toast.error(errorMessage);
       console.log(err);
     }
   };

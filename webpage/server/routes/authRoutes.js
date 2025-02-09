@@ -10,7 +10,8 @@ const { authenticateUser } = require("../controllers/userController");
 router.use(
     cors({
         credentials: true,
-        origin: "https://cover-clever.vercel.app",
+        origin: "http://localhost:5173",
+        // origin: "https://cover-clever.vercel.app",
         exposedHeaders: ['Authorization']  // Important for token access
     })
 );
