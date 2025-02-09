@@ -1,0 +1,28 @@
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;  /* Add some padding to the left */
+}
+
+.navbar-logo img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  user-select: none;
+  user-select: none;  /* Prevents text/image selection */
+  -webkit-user-drag: none;  /* Prevents dragging in webkit browsers */
+  -webkit-user-select: none;  /* Safari specific */
+  -moz-user-select: none;  /* Firefox specific */
+  -ms-user-select: none;  /* IE/Edge specific */
+  pointer-events: none;  /* Prevents all click/drag events */
+}
+
+.navbar-title {
+  color: white;
+  user-select: none;  /* Make text non-selectable */
+}
+
+.MuiToolbar-root {
+  min-height: 48px !important;
+  padding: 0 16px !important;
+}

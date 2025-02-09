@@ -1,0 +1,111 @@
+
+/* Ensure the container starts from the very top */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+/* body, #root {
+  height: 100vh !important;
+  overflow: hidden !important;
+} */
+
+/* Specifically target the Toolbar */
+.MuiToolbar-root {
+  min-height: 48px !important;
+}
+
+/* Ensure AppBar sits at the very top */
+.MuiAppBar-root {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.login-logo {
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  user-select: none;  /* Prevents text/image selection */
+  -webkit-user-drag: none;  /* Prevents dragging in webkit browsers */
+  -webkit-user-select: none;  /* Safari specific */
+  -moz-user-select: none;  /* Firefox specific */
+  -ms-user-select: none;  /* IE/Edge specific */
+  pointer-events: none;  /* Prevents all click/drag events */
+}
+
+.input-field {
+  /* Change input background */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Style the input when focused */
+.input-field .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Style the input border */
+.input-field .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Style the input when focused */
+.input-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #000000;
+}
+
+/* Style the helper text */
+.input-field .MuiFormHelperText-root {
+  color: rgba(252, 0, 0, 0.7);
+}
+
+/* Style the helper text when error */
+.input-field .MuiFormHelperText-root.Mui-error {
+  color: #f44336;
+}
+
+/* Add this to style the label text */
+.input-field .MuiInputLabel-root {
+    color: rgba(0, 0, 0, 0.7) !important; /* Change to your desired color */
+}
+  
+/* Style for when the label is focused */
+.input-field .MuiInputLabel-root.Mui-focused {
+    color: rgba(0, 0, 0, 0.9) !important; /* Change to your desired focused color */
+}
+
+/* Style the input text entered by user */
+.input-field .MuiInputBase-input {
+  color: rgba(0, 0, 0, 0.9) !important; /* Change to your desired color */
+}
+
+/* Style the password visibility toggle icon */
+.input-field .MuiIconButton-root {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Optional: Style the hover state */
+.input-field .MuiIconButton-root:hover {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+  .login-button {
+    background-color: #4caf50 !important;
+    color: #ffffff !important; /* White button text */
+    text-transform: none;
+    margin-top: 16px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  
+  .login-button:hover {
+    background-color: #81c784 !important; /* Lighter green on hover */
+  }

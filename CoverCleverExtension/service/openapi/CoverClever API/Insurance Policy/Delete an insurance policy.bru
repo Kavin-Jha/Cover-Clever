@@ -1,0 +1,19 @@
+meta {
+  name: Delete an insurance policy
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/insurance-policy/:policyId
+  body: none
+  auth: none
+}
+
+params:path {
+  policyId: 
+}
+
+headers {
+  Authorization: 
+}

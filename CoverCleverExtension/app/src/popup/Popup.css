@@ -1,0 +1,13 @@
+body {
+    background-color: #E5D9F2;
+    width: 400px;  /* Match with manifest width */
+    height: 600px;
+    margin: 0 !important;
+    /* padding: 0 !important; */
+}
+
+/* Also reset any potential root padding */
+#root {
+    margin: 0 !important;
+    /* padding: 0 !important; */
+}

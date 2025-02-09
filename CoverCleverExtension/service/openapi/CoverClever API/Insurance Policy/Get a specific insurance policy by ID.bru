@@ -1,0 +1,19 @@
+meta {
+  name: Get a specific insurance policy by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/insurance-policy/:policyId
+  body: none
+  auth: none
+}
+
+params:path {
+  policyId: 
+}
+
+headers {
+  Authorization: 
+}

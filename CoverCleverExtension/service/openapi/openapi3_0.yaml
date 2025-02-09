@@ -1,0 +1,624 @@
+openapi: 3.0.3
+info:
+  title: CoverClever API
+  description: API for managing user authentication, profiles, and card operations.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+tags:
+  - name: Users 
+    description: User management and authentication operations
+  - name: Insurance Policy 
+    description: Insurance Policy management
+paths:
+  /register:
+    post:
+      tags:
+        - Users
+      summary: Register a new user
+      requestBody:
+        description: User registration details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterUser'
+      responses:
+        "201":
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: User already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /login:
+    post:
+      tags:
+        - Users
+      summary: Log in an existing user
+      requestBody:
+        description: User login details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUser'
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  user:
+                    $ref: '#/components/schemas/UserResponse'
+        "401":
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /profile:
+    get:
+      tags:
+        - Users
+      summary: Get the profile of the authenticated user
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Profile retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+    put:
+      tags:
+        - Users
+      summary: Update the profile of the authenticated user
+      requestBody:
+        description: User profile update details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUser'
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Profile updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /reset-password:
+    post:
+      tags:
+        - Users
+      summary: Request a password reset
+      requestBody:
+        description: Email address for password reset
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+      responses:
+        "200":
+          description: Reset email sent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /reset-password/{token}:
+    post:
+      tags:
+        - Users
+      summary: Reset password using reset token
+      parameters:
+        - name: token
+          in: path
+          required: true
+          description: Password reset token
+          schema:
+            type: string
+      requestBody:
+        description: New password
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newPassword:
+                  type: string
+                  minLength: 8
+      responses:
+        "200":
+          description: Password reset successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid or expired token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string    
+  /insurance-policies:
+    get:
+      tags:
+        - Insurance Policy
+      summary: Get all insurance policies for the authenticated user
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Insurance policies retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  insurancePolicies:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/InsurancePolicy'
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: No policies found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+    post:
+      tags:
+        - Insurance Policy
+      summary: Add a insurance policy to the user's profile
+      requestBody:
+        description: Insurance details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InsurancePolicy'
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Insurance Policy added successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "400":
+          description: Invalid Insurance Policy details or already added
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+  /insurance-policy/{policyId}:
+    get:
+      tags:
+        - Insurance Policy
+      summary: Get a specific insurance policy by ID
+      parameters:
+        - name: policyId
+          in: path
+          required: true
+          description: ID of the insurance policy to retrieve
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Insurance policy retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InsurancePolicy'
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: Policy not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+    delete:
+      tags:
+        - Insurance Policy
+      summary: Delete an insurance policy
+      parameters:
+        - name: policyId
+          in: path
+          required: true
+          description: ID of the insurance policy to delete
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authentication
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Insurance policy deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "401":
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "404":
+          description: Policy not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+components:
+  schemas:
+    RegisterUser:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          minLength: 8
+        firstName:
+          type: string
+        lastName:
+          type: string
+      required:
+        - email
+        - password
+        - firstName
+        - lastName
+    LoginUser:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      required:
+        - email
+        - password
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        medicalConditions:
+          type: object
+        insurancePreferenceExplanation:
+          type: string
+        incomeLevel:
+          type: integer
+        desiredBenefits:
+          type: array
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+          format: email
+        firstName:
+          type: string
+        lastName:
+          type: string
+        medicalConditions:
+          type: object
+        insurancePreferenceExplanation:
+          type: string
+        incomeLevel:
+          type: integer
+          minimum: 0
+        desiredBenefits:
+          type: array
+          items:
+            type: string
+    UpdateUser:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        firstName:
+          type: string
+        lastName:
+          type: string
+        medicalConditions:
+          type: object
+        insurancePreferenceExplanation:
+          type: string
+        incomeLevel:
+          type: integer
+          minimum: 0
+        desiredBenefits:
+          type: array
+          items:
+            type: string
+    InsurancePolicy:
+      type: object
+      properties:
+        policyId:
+          type: string
+        deductibles:
+          type: object
+        benefits:
+          type: object
+        score:
+          type: integer
+        comments:
+          type: string
+      required:
+        - deductibles
+        - benefits
+        - score
+        - comments

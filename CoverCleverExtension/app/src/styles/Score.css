@@ -1,0 +1,9 @@
+.score-container {
+    background-color: #E5D9F2;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }

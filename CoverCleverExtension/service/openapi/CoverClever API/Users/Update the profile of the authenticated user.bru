@@ -1,0 +1,27 @@
+meta {
+  name: Update the profile of the authenticated user
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/profile
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: 
+}
+
+body:json {
+  {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+    "medicalConditions": {},
+    "insurancePreferenceExplanation": "",
+    "incomeLevel": "",
+    "desiredBenefits": []
+  }
+}
