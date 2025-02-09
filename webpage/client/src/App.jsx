@@ -11,7 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Questionnaire from "./pages/Questionnaire";
 import PrivateRoute from "./components/PrivateRoute";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://cover-clever.onrender.com";
 axios.defaults.withCredentials = true;
 
 // Add interceptor to add token to all requests

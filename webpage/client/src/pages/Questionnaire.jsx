@@ -18,6 +18,7 @@ export default function Questionnaire() {
       } else {
         setResponses({});
         toast.success("Responses submitted!");
+        navigate("/dashboard");
         
         // Communicate with extension
         if (typeof chrome !== 'undefined' && chrome.runtime) {

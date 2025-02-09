@@ -28,10 +28,10 @@ export default function Login() {
         setData({});
         await fetchUser();
         toast.success("Login success!");
-        // navigate("/questionnaire");
+        navigate("/questionnaire");
         
         // Communicate with extension
-        if (chrome.runtime) {
+        if (typeof chrome !== 'undefined' && chrome.runtime) {
           chrome.runtime.sendMessage(
             "obhfnegefpkpoicjhfafbibcocbakkoo",
             { 
