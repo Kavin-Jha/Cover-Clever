@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 // import Home from './pages/Home';
-import Score from './pages/Score';
+// import Score from './pages/Score';
 // import Register from './pages/Register';
 
 import { User } from './types/User';
@@ -40,9 +40,9 @@ const App: React.FC = () =>  {
       )} */}
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/" element={<Login />} />
         {/* <Route path="/register" element={<Register />} /> */}
-        <Route path="/" element={<Score />} /> 
+        {/* <Route path="/" element={<Score />} />  */}
       </Routes>
     </HashRouter>
   )
