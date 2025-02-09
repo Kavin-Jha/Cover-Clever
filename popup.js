@@ -147,11 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return context;
   }
-
-  const minimizeBtn = document.getElementById('minimize-btn');
-  minimizeBtn.addEventListener('click', () => {
-    document.querySelector('.chat-body').classList.toggle('hidden');
-    document.querySelector('.chat-input').classList.toggle('hidden');
-    minimizeBtn.textContent = document.querySelector('.chat-body').classList.contains('hidden') ? '+' : '−';
-  });
 });
