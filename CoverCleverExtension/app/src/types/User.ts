@@ -6,5 +6,5 @@ export interface User {
     medicalConditions: object;
     insurancePreferenceExplanation: string;
     incomeLevel: number;
-    desiredBenefits: string[];
+    desiredBenefits: object;
   }

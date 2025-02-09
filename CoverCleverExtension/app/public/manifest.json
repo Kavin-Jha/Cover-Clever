@@ -25,7 +25,8 @@
     "default_height": 700
   },
   "host_permissions": [
-    "https://member.bluecrossma.com/*"
+    "https://member.bluecrossma.com/*",
+    "http://localhost:8000/*"
   ]
 }
 

@@ -10,9 +10,10 @@ const { authenticateUser } = require("../controllers/userController");
 router.use(
     cors({
         credentials: true,
-        origin: "http://localhost:5173",
-        // origin: "https://cover-clever.vercel.app",
-        exposedHeaders: ['Authorization']  // Important for token access
+        origin: ["chrome-extension://*", "http://localhost:5173", "https://cover-clever.vercel.app"],
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
+        exposedHeaders: ['Authorization']
     })
 );
 

@@ -5,6 +5,15 @@ const { mongoose } = require("mongoose");
 const cookieParser = require("cookie-parser");
 const app = express();
 
+// Add this before your routes
+app.options('*', cors({
+    origin: ["chrome-extension://*", "http://localhost:5173", "https://cover-clever.vercel.app"],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Authorization']
+}));
+
 // Database connection
 mongoose
   .connect(process.env.MONGO_URL)

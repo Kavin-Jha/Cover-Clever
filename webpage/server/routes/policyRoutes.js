@@ -13,10 +13,10 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
-    // origin: "https://cover-clever.vercel.app",
-    exposedHeaders: ['Authorization']
-  })
+    origin: ["chrome-extension://*", "http://localhost:5173", "https://cover-clever.vercel.app"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Authorization']  // Important for token access
+})
 );
 
 

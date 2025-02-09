@@ -1,51 +1,67 @@
 import { User } from '../types/User';
 
-const API_URL = "http://localhost:3200"; // Backend API base URL
+const API_URL = "http://localhost:8000"; // Backend API base URL
 
 interface AuthenticatedUser extends User {
+  id: string;
   token: string;
 }
 
 // Login user
 export const loginUser = async (email: string, password: string): Promise<AuthenticatedUser> => {
   try {
-    const response = await fetch(`${API_URL}/api/auth/login`, {
+    const response = await fetch(`${API_URL}/login`, {
       method: "POST",
+      credentials: 'include',
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json",
       },
       body: JSON.stringify({ email, password }),
     });
 
     if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || "Login failed.");
+      const errorData = await response.json();
+      throw new Error(errorData.error || errorData.message || "Login failed.");
+    }
+    
+    // Get token from Authorization header
+    const token = response.headers.get('Authorization')?.split(' ')[1];
+    if (!token) {
+      throw new Error('No token received');
     }
 
     const data = await response.json();
     
-    // Validate the response matches our AuthenticatedUser type
+    // Construct authenticated user with data from response
     const user: AuthenticatedUser = {
-      firstName: data.firstName,
-      lastName: data.lastName,
-      email: data.email,
-      medicalConditions: data.medicalConditions,
-      insurancePreferenceExplanation: data.insurancePreferenceExplanation,
-      incomeLevel: data.incomeLevel,
-      desiredBenefits: data.desiredBenefits,
-      token: data.token
+      id: data.user.id,
+      firstName: data.user.firstName,
+      lastName: data.user.lastName,
+      email: data.user.email,
+      token: token,
+      medicalConditions: data.user.medicalConditions || {},
+      insurancePreferenceExplanation: data.user.insurancePreferenceExplanation || '',
+      incomeLevel: data.user.incomeLevel || 0,
+      desiredBenefits: data.user.desiredBenefits || []
     };
+
+    // Store token in localStorage
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
+    
 
     return user;
   } catch (error) {
-    throw new Error(error instanceof Error ? error.message : 'Login failed');
+    console.error('Login error:', error);
+    throw error;
   }
 };
 
 // Get user profile
-export const getProfile = async (token: string): Promise<any> => {
+export const getProfile = async (token: string): Promise<User> => {
   try {
-    const response = await fetch(`${API_URL}/api/auth/profile`, {
+    const response = await fetch(`${API_URL}/profile`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -57,7 +73,8 @@ export const getProfile = async (token: string): Promise<any> => {
       throw new Error(error.message || "Failed to fetch profile.");
     }
 
-    return await response.json(); // Returns user profile data
+    const data = await response.json();
+    return data;
   } catch (error: any) {
     console.error("Get profile error:", error.message);
     throw new Error("Unable to fetch profile. Please ensure you are logged in.");
@@ -65,9 +82,9 @@ export const getProfile = async (token: string): Promise<any> => {
 };
 
 // Update user profile
-export const updateProfile = async (token: string, profileData: any): Promise<any> => {
+export const updateProfile = async (token: string, profileData: Partial<User>): Promise<User> => {
   try {
-    const response = await fetch(`${API_URL}/api/auth/profile`, {
+    const response = await fetch(`${API_URL}/profile`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +98,7 @@ export const updateProfile = async (token: string, profileData: any): Promise<an
       throw new Error(error.message || "Failed to update profile.");
     }
 
-    return await response.json(); // Returns updated profile data
+    return await response.json();
   } catch (error: any) {
     console.error("Update profile error:", error.message);
     throw new Error("Unable to update profile. Please try again.");
@@ -93,36 +110,8 @@ export const logoutUser = (): void => {
   try {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    console.log("User logged out successfully.");
   } catch (error: any) {
     console.error("Logout error:", error.message);
     throw new Error("Unable to log out. Please try again.");
-  }
-};
-
-// Get balance -- need to change
-export const getBalance = async (token: string): Promise<{ balance: number }> => {
-  try {
-    const response = await fetch(`${API_URL}/api/wallet/balance`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message || "Failed to fetch balance.");
-    }
-
-    const data = await response.json();
-    if (typeof data.balance !== "number") {
-      throw new Error("Invalid balance data format.");
-    }
-
-    return data; // { balance: number }
-  } catch (error: any) {
-    console.error("Get balance error:", error.message);
-    throw new Error("Unable to fetch balance. Please try again later.");
   }
 };

@@ -126,9 +126,9 @@ const Login: React.FC<LoginProps> = ({ setUser }) => {
 
     // Validate both fields
     const isEmailValid = validateEmail(email);
-    const isPasswordValid = validatePassword(password);
+    // const isPasswordValid = validatePassword(password);
 
-    if (!isEmailValid || !isPasswordValid) {
+    if (!isEmailValid) {
       setIsLoading(false);
       return;
     }

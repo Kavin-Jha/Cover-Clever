@@ -40,7 +40,7 @@ const App: React.FC = () =>  {
       )} */}
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login setUser={setUser} />} />
         {/* <Route path="/register" element={<Register />} /> */}
         {/* <Route path="/" element={<Score />} />  */}
       </Routes>
